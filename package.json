@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "vant-weapp": "^0.4.6"
+  }
+}

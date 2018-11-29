@@ -1,0 +1,62 @@
+<view class="container" >
+
+    <view class="play-area">
+        <view class="btn" bindtap="togglePlay" wx-if="{{ list.length }}">
+            <view class="stop" bind:transitionend="animationEnd" style="opacity: {{ playStatus ? 1 : 0}}; transform: translate3d({{ playStatus ? 0 : '150%' }}, 0, 0)"></view>
+            <view class="play" bind:transitionend="animationEnd"  style="opacity: {{ playStatus ? 0 : 1 }}; transform: translate3d({{ playStatus ? '-150%' : 0 }}, 0, 0)"></view>
+        </view>
+        <view class="share-btn">
+          <button open-type='share' class="share-btn-inner"></button>
+        </view>
+        <!--
+        <view class="article-btn">
+        </view>
+        -->
+    </view>
+
+    <scroll-view scroll-y class="scroll-box" style="height: {{ scrollBoxHeight }}px" bindscrolltolower="onScrollToLower">
+        <view class="slist">
+              <van-swipe-cell  wx:for="{{ list }}" wx:key="this">
+                <template is="listItem" data="{{ o: item, idx: index }}"  />
+            </van-swipe-cell>
+           <view class="foot-box" wx:if="{{ !!listFooterText && list.length > 10 }}"><view class="weui-loading" wx:if="{{ listFooterText != '没有更多了' }}"></view><text>{{ listFooterText }}</text></view>
+        </view>
+    </scroll-view>
+
+     <view class="footer-tab">
+        <view class="footer-tab-item" wx:for="{{ footerTabs }}" bindtap='switchTab' data-idx="{{ index }}" wx:key="this"><text>{{ item }}</text><view wx:if="{{ currentTab == index }}" class="shadow"></view></view>
+     </view>
+
+</view>
+ 
+
+<template name="listItem">
+    <view class="list-item-box" bindtap='tapItem' data-source="{{ o.source }}" data-id="{{ o._id }}" data-idx="{{ idx }}">
+        <view class="list-item-top">
+            <view class="title {{ o.playing && 'playing-title' }}">
+                <text>{{ o.name }}</text>
+            </view>
+            <view class="play-animation-box" wx-if="{{ o.playing }}">
+                <view class="inner">
+                    <view class="line"></view>
+                    <view class="line"></view>
+                    <view class="line"></view>
+                    <view class="line"></view>
+                </view>
+            </view>
+            <!--
+            <view class="article" wx:if="{{ !!o.webviewurl }}" catchtap='toWebView' data-url="{{ o.webviewurl }}">
+                <image src="" class="icon-link"></image>
+                <text>文章</text>
+            </view>
+            -->
+        </view>
+        <view class="list-item-bottom">
+            <view class="author"><view  class="icon-author"></view><text>{{ o.tag }}</text></view>
+            <view class="duration" wx:if="{{ !!o.duration }}"><view class="icon-time"></view><text>{{ o.duration }}</text></view>
+            <view class="date" wx:if="{{ !!o.langtype }}"><view class="icon-langtype"></view><text>{{ o.langtype }}</text></view>
+            <view class="date" wx:if="{{ !!o.date }}"><view class="icon-date"></view><text>{{ o.date }}</text></view>
+        </view>
+        <view class="progress" style="width: {{ o.progressWidth || 0 }}px"></view>
+    </view>
+</template>

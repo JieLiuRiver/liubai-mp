@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/audio/index",
+    "pages/webview/index"
+  ],
+  "window": {
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "requiredBackgroundModes": ["audio"],
+  "debug": true
+}
