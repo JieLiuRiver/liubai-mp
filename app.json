@@ -1,8 +1,6 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/audio/index",
-    "pages/webview/index"
+    "pages/index/index"
   ],
   "window": {
   },

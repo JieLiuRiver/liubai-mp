@@ -1,8 +1,0 @@
-{
-  "navigationBarBackgroundColor": "#195684",
-  "color": "#fffff",
-  "navigationBarTitleText": "柳白大话",
-  "usingComponents": {
-    "van-swipe-cell": "/vant-weapp/swipe-cell/index"
-  }
-}
