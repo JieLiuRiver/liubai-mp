@@ -1,1 +1,11 @@
 page{background-color: #eee;}
+
+.header{display: flex; flex-direction: column;  justify-content: center; align-items: center; padding-top: 10%;}
+.header-icon{width: 120rpx; height: 120rpx;border-radius: 60rpx; margin-bottom: 15rpx;}
+
+.body{display: flex; flex-direction: column;  justify-content: flex-start; align-items: center; padding: 0 30rpx; margin-top: 60rpx;}
+.item{display: flex; flex-direction: row;  justify-content: space-between; align-items: center; height: 120rpx; background:rgba(255,255,255,0.6);
+box-shadow: 10rpx 10rpx 25rpx rgba(0,0,0,0.04), -5rpx -5rpx 15rpx rgba(0,0,0,0.04); border-radius: 6rpx; width: 100%; box-sizing: border-box; padding: 0 20rpx;}
+.icon-wrap{width: 50rpx; height: 50rpx; border-radius: 50%; background-color: #474747; display: flex; justify-content: center; align-items: center;box-shadow: 10rpx 10rpx 25rpx rgba(0,0,0,0.04), -5rpx -5rpx 15rpx rgba(0,0,0,0.04);}
+.icon-arrow{width: 30rpx; height: 30rpx;}
+.item-text{font-size: 30rpx; color: #000; font-weight: bold;}

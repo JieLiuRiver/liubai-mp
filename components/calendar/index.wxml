@@ -1,0 +1,34 @@
+<view class="calendar-container">
+   <!-- 星期 -->
+    <view class="calendar-weeks-list">
+        <view class="calendar-weeks-item" style="flex:0 0 {{ cellWidth }}px" wx:for="{{ weeksCh }}" wx:key="this">
+            <text class="calendar-weeks-item-text">{{ item }}</text>
+        </view>
+    </view>
+    <!-- 日期 -->
+    <view class="calendar-body">
+        <view class="calendar-body-item" wx:for="{{ availableMonths }}" wx:key="this">
+              <template is="headerYearMonth" data="{{ year: item.viewTime.year, month: item.viewTime.month }}" />
+              <template is="daylist" data="{{ daylist: item.days, whichPanel: index, cellWidth }}"/>
+        </view>
+    </view>
+    <!-- 提示 -->
+    <view class="tip-wrap" wx:if="{{ !hasLeaveDate }}"><text>请选择离店日期</text></view>
+</view>
+
+<!-- 头部年月 -->
+<template name="headerYearMonth">
+  <view class="calendar-header-wrap">
+      <text class="calendar-header-text">{{ year + '年' + ' ' + (month < 10 ? '0' + month : month) + '月' }}</text>
+  </view>
+</template>
+
+<!-- 日期列表 -->
+<template name="daylist">
+  <view class="calendar-day-list">
+      <view class="calendar-day-item {{ !!item.selected && !!item.visible && 'selected-item' }} {{ !item.visible && 'visible-out' }}" wx:for="{{ daylist }}" wx:key="this" bindtap="onPressDay" data-o="{{ item }}" data-idx="{{ index }}" data-panelidx="{{ whichPanel }}" style="flex:0 0 {{ cellWidth }}px">
+            <text class="calendar-day-text">{{ item.day }}</text>
+            <text wx:if="{{ !!item.selected }}" class="calendar-day-text desc-text">{{ item.selected.label }}</text>
+      </view>
+  </view>
+</template>

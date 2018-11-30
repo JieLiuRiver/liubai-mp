@@ -1,0 +1,22 @@
+.calendar-container{}
+
+.calendar-weeks-list{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; box-sizing: border-box; padding: 20rpx 0; background-color: #eee;position: fixed; top: 0; left: 0; right: 0;}
+.calendar-weeks-item{display: flex; flex-direction: row; justify-content: center; align-items: center;}
+.calendar-weeks-item-text{color: #474747; font-size: 26rpx;}
+
+.calendar-body{ padding-top: 76rpx;}
+.calendar-body-item{ margin-bottom: 30rpx;}
+
+
+.calendar-header-wrap{display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 20rpx 0; border-top: 1rpx solid #eee; border-bottom: 1rpx solid #eee;}
+.calendar-header-text{font-size: 26rpx;}
+
+.calendar-day-list{width: 100%;display: flex; flex-direction: row; justify-content: flex-start; align-items: center; box-sizing: border-box;flex-wrap: wrap;}
+.calendar-day-item{display: flex; flex-direction: column; justify-content: flex-start; align-items: center;  height: 107rpx;  box-sizing: border-box; padding-top: 15rpx;border-bottom: 1rpx solid #eee;}
+.calendar-day-text{font-size: 26rpx;}
+.calendar-day-text.desc-text{font-size: 22rpx; margin-top: 10rpx;}
+.calendar-day-item.selected-item{background-color: #2eb6a8; color: #fff;}
+.calendar-day-item.visible-out text{visibility: hidden;}
+
+.tip-wrap{position: fixed; bottom: 60rpx; left: 50%; transform: translate3d(-50%, 0, 0);display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 10rpx; border-radius: 6rpx; background-color: #6d6d6d;}
+.tip-wrap text{color: #fff;font-size: 24rpx;}

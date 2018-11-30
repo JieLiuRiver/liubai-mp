@@ -1,15 +1,17 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/calendar/index"
   ],
-  "window": {
-  },
+  "window": {},
   "networkTimeout": {
     "request": 20000,
     "connectSocket": 20000,
     "uploadFile": 20000,
     "downloadFile": 20000
   },
-  "requiredBackgroundModes": ["audio"],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "debug": true
 }

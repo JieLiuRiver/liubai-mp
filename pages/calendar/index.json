@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择日期",
+  "usingComponents": {
+    "i-calendar": "/components/calendar/index"
+  }
+}

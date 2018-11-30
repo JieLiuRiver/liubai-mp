@@ -1,3 +1,6 @@
 {
-	"navigationBarTitleText": "IIU-UI"
+	"navigationBarTitleText": "IIU UI",
+    "usingComponents": {
+      "i-calendar": "/components/calendar/index"
+    }
 }

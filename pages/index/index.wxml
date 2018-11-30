@@ -1,5 +1,12 @@
 <view class="container">
     <view class="header">
-        
+        <image src="/images/code.jpeg" class="header-icon"></image> 
+        <text>IIU UI</text>
+    </view>
+    <view class="body">
+        <navigator wx:for="{{ list }}" url="{{ item.route }}" wx:key="this" class="item">
+              <text class="item-text">{{ item.label }}</text>
+              <view class="icon-wrap"><image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAEwElEQVR4Xu3czatNYRQG8GdFkvwPRjJiKt8fE0UpZaCUSBjdUjK6E8rwptQd+JhIkhIDkUSSKaWY6PIHKKUMmGlpu/vm3GPvfdY+dw/e932eO37P7qz1/Pba7973nGPQH3UHjLp6FQ8BIEcgAAJA3gHy8jUBBIC8A+TlawIIAHkHyMvXBBAA8g6Ql68JIADkHSAvXxNAAMg7QF6+JoAAkHeAvHxNAAEg7wB5+ZoAAkDeAfLyNQEEgLwD5OUnPQHcvXp/pwEcAvABwFUz+0Ge2aDlpw7gCoDZkYq/ANhlZl8H7QLxwVIHsABg41g+QjAg2NQBvKnO+IZ6hWAgBKkDOAjgaUutQjAAgqQBVPW5+xkAN4VggLQbDpE8gBEEN4DGr7JpEqzARhYAagQnANwWghWknesEWHrf7i4Ew+af37eDAwi2m9m3gftU7OGyuQSMJjABwScAu4UgZjZLAIE9gRDE8s/vEqBJEEw2uCzbCRDcGGoSTICQPQBdDoKnesuyIgAIwfQIigEgBNMhKAqAEPRHUBwAIeiHoEgAQhBHUCyAIIIdZvY93q7yVhYNIIDgI4C9zAiKB1AjOAbgXsu/kqkRUAAQgvZLFw0AIWhGQAVACP5HQAdACJYjoAQgBP8Q0AIQgkUE1ACEQAD+ngXuTvucgH4CLF0NAwiqbyUX99V0ARjZFE9A8B7AvtIQCMDYrTEbAgFoeEDGhEAAWh6T1wjuAljVsKSYy4EAdPyL392PAHhQMgIBmPAZj9IRCEDgQz4lIxCAAID6YVHX5eAtgG1m9jt4uGSWCUCPKCZMglNmVv2ARVZ/AtAjLndfD+AdgE0NL7tmZud7HC6JpQIQjKEO/yWArS0vOW5m1ecOs/oTgEBc7r4OwKuO8G+Z2dnAoZJbIgCTbwOr8J8D2Nmy9A6Ak2bmyaUbeEMC0P0gqOjwq9IFoAVAPfaLPfOXyhaABgCB8G8BOJfr2B8tWQDGAETCz3XD1zTsBGCkK2zhaw+wPPy1AF507PazvdXruhnQBFj8UGgVfvWz9PtbmlVk+JoA5OHTA2A+8+lvAwPhz5vZTOBhWtZLKPcACv+fWToACn/5wKIC4O5rADzr2O1TjH3KJ4F1+I8BHGi5aNOFT3MXoPDb96nFXwIUfvdNStEAFP7kO9RiAQTCnzOzi5NbVPaKIgEo/Dja4gAo/Hj4xd0FuPtqAE86bvU09sd8FDMB6vAfAjjccg4o/IbGFAFA4fcb+0U9CVT404ef/R5A4a8s/KwBBMK/bGaXVt6iso+Q5R4gEP5FM5srO7phqssOgLtXP9r0qGO3r/B72MgKQB3+fQBHW2pU+D3Cz2oPoPB7JhtcnsUEUPjBNKdYljwAhT9Fqj1ekjQAhd8jySmXpg7gCoDZltpmzGx+yrr1sroDqQNYALCxIS2FPxDh1AG8BrBnrFaFP1D4yd8GuvsWANVHuTcA+AXggpldH7B++kMlPQGqdOqN4GYAn83sJ31iAzcgeQAD16vDjXVAAMhJCIAAkHeAvHxNAAEg7wB5+ZoAAkDeAfLyNQEEgLwD5OVrAggAeQfIy9cEEADyDpCXrwkgAOQdIC9fE0AAyDtAXr4mgACQd4C8fE0AASDvAHn5fwDXqsyQn3hXmgAAAABJRU5ErkJggg==" class="icon-arrow"/></view>
+        </navigator>
     </view>
 </view>
